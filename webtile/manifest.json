@@ -2,8 +2,8 @@
   "manifestVersion": 1,
   "name": "BKK Futár 59-105-105",
   "description": "Az 59-es és a 105-ös busz menetrendje három megállóban.",
-  "version": 2,
-  "versionString": "2",
+  "version": 3,
+  "versionString": "3",
   "author": "Balássy György",
   "organization": "http://balassygyorgy.wordpress.com",
   "contactEmail": "balassy.gyorgy@outlook.com",
@@ -17,73 +17,70 @@
       "url": "http://bandfutar.azurewebsites.net/nextride",
       "style": "Simple",
       "content": {
-        "_1_0title": "[0].title",
-        "_1_0currenttime": "[0].currentTime",
-        "_1_0subtitle": "[0].subTitle",
+        "_1_0shorttitle": "[0].shortTitle",
         "_1_0shortnextrides": "[0].shortNextRides",
-        "_1_1title": "[1].title",
-        "_1_1currenttime": "[1].currentTime",
-        "_1_1subtitle": "[1].subTitle",
+        "_1_1shorttitle": "[1].shortTitle",
         "_1_1shortnextrides": "[1].shortNextRides",
-        "_1_2title": "[2].title",
-        "_1_2currenttime": "[2].currentTime",
-        "_1_2subtitle": "[2].subTitle",
-        "_1_2shortnextrides": "[2].shortNextRides"
+        "_1_2shorttitle": "[2].shortTitle",
+        "_1_2shortnextrides": "[2].shortNextRides",
+        "_1_2currenttime": "[2].currentTime"
       }
     }
   ],
   "pages": [
     {
-      "layout": "MSBand_NoScrollingText",
+      "layout": "MSBand_ScrollingText",
       "condition": "true",
       "textBindings": [
         {
           "elementId": "1",
-          "value": "{{_1_0title}} ({{_1_0currenttime}})"
+          "value": "{{_1_0shorttitle}}"
         },
         {
           "elementId": "2",
-          "value": "{{_1_0subtitle}}"
-        },
-        {
-          "elementId": "3",
           "value": "{{_1_0shortnextrides}}"
         }
       ]
     },
     {
-      "layout": "MSBand_NoScrollingText",
+      "layout": "MSBand_ScrollingText",
       "condition": "true",
       "textBindings": [
         {
           "elementId": "1",
-          "value": "{{_1_1title}} ({{_1_1currenttime}})"
+          "value": "{{_1_1shorttitle}}"
         },
         {
           "elementId": "2",
-          "value": "{{_1_1subtitle}}"
-        },
-        {
-          "elementId": "3",
           "value": "{{_1_1shortnextrides}}"
         }
       ]
     },
     {
-      "layout": "MSBand_NoScrollingText",
+      "layout": "MSBand_ScrollingText",
       "condition": "true",
       "textBindings": [
         {
           "elementId": "1",
-          "value": "{{_1_2title}} ({{_1_2currenttime}})"
+          "value": "{{_1_2shorttitle}}"
         },
         {
           "elementId": "2",
-          "value": "{{_1_2subtitle}}"
+          "value": "{{_1_2shortnextrides}}"
+        }
+      ]
+    },
+    {
+      "layout": "MSBand_SingleMetric",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "Utolsó frissítés"
         },
         {
-          "elementId": "3",
-          "value": "{{_1_2shortnextrides}}"
+          "elementId": "2",
+          "value": "{{_1_2currenttime}}"
         }
       ]
     }
