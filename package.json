@@ -22,6 +22,7 @@
   "homepage": "https://github.com/balassy/band-futar-tile#readme",
   "dependencies": {
     "glue": "^3.1.0",
-    "hapi": "^12.1.0"
+    "hapi": "^12.1.0",
+    "request-promise": "^2.0.0"
   }
 }
