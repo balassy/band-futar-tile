@@ -6,7 +6,7 @@ let Rest = require('../utils/rest');
 
 module.exports = {
     get: function (request, reply) {
-        let minutesAfter = 30;
+        let minutesAfter = 50;
         
         let stops = [
             {
