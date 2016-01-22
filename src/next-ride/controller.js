@@ -14,11 +14,17 @@ module.exports = {
     get: function (request, reply) {
         let stopId = 'BKK_F02296';
         let minutesAfter = 30;
+        
+        let now = formatTime(Date.now() / 1000);
+        
         let result = {
             name: '59 villamos',
             description: 'Vas Gereben utca -> Széll Kálmán tér',
-            now: formatTime(Date.now() / 1000),
-            nextRides: []
+            now: now,
+            nextRides: [],
+            shortTite: `59 (${now} után)`,
+            shortSubTitle: 'Vas G. - Széll K.',
+            shortNextRides: ''
         };
 
         Service.get(stopId, minutesAfter)
@@ -48,6 +54,8 @@ module.exports = {
                     let arrivalTimeString = formatTime(arrivalTimeInSeconds);
                     result.nextRides.push(arrivalTimeString);
                 }
+                
+                result.shortNextRides = result.nextRides.join(', ');
 
                 Rest.ok(reply, result);
             })
