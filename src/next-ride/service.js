@@ -10,20 +10,18 @@ function formatTime(dateTimeInSeconds) {
 }
 
 module.exports = {
-    get: function (stopId, minutesAfter) {
-        let now = formatTime(Date.now() / 1000);
+    get: function (stop, minutesAfter) {
+        //let now = formatTime(Date.now() / 1000);        
 
         let result = {
-            name: '59 villamos',
-            description: 'Vas Gereben utca -> Széll Kálmán tér',
-            now: now,
+            title: stop.title,
+            subTitle: stop.subTitle,
+            currentTime: '',
             nextRides: [],
-            shortTite: `59 villamos ${now} után`,
-            shortSubTitle: 'Vas G. u. -> Széll K. tér',
             shortNextRides: ''
         };
 
-        let uri = `http://futar.bkk.hu/bkk-utvonaltervezo-api/ws/otp/api/where/arrivals-and-departures-for-stop.json?stopId=${stopId}&onlyDepartures=true&minutesBefore=0&minutesAfter=${minutesAfter}`;
+        let uri = `http://futar.bkk.hu/bkk-utvonaltervezo-api/ws/otp/api/where/arrivals-and-departures-for-stop.json?stopId=${stop.id}&onlyDepartures=true&minutesBefore=0&minutesAfter=${minutesAfter}`;
 
         let options = {
             method: 'GET',
@@ -34,7 +32,6 @@ module.exports = {
 
         return RP(options)
             .then(function (response) {
-                console.log(response);
                 if (response.statusCode !== 200) {
                     throw new Error(`The webservice returned with a HTTP status code different than 200: ${response.statusCode}`);
                 }
@@ -53,16 +50,18 @@ module.exports = {
                     throw new Error(`The webservice returned a response body with a code different than 200: ${body.code}`);
                 }
 
+                result.currentTime = formatTime(body.currentTime / 1000);
+
                 let rides = body.data.entry.stopTimes;
 
                 for (let ride of rides) {
-                    let arrivalTimeInSeconds = ride.predictedArrivalTime || ride.arrivalTime;
-                    let arrivalTimeString = formatTime(arrivalTimeInSeconds);
-                    result.nextRides.push(arrivalTimeString);
+                    let rideTimeInSeconds = ride.predictedArrivalTime || ride.arrivalTime || ride.departureTime;
+                    let rideTimeString = formatTime(rideTimeInSeconds);
+                    result.nextRides.push(rideTimeString);
                 }
 
                 result.shortNextRides = result.nextRides.join(', ');
-                
+
                 return result;
             });
     }
