@@ -12,17 +12,20 @@ module.exports = {
             {
                 id: 'BKK_F02296',
                 title: `59 villamos`,
-                subTitle: 'Vas G. u. -> Széll K. tér'                
+                subTitle: 'Vas G. u. -> Széll K. tér',
+                shortTitle: '59 (Vas G.)'              
             },
             {
                 id: 'BKK_F02294',
                 title: `105 busz`,
-                subTitle: 'Apor V. tér -> Gyöngyösi u.'                
+                subTitle: 'Apor V. tér -> Gyöngyösi u.',
+                shortTitle: '105 (Apor V.)'              
             },
             {
                 id: 'BKK_F00945',
                 title: `105 busz`,
-                subTitle: 'Bajcsy-Zs. út -> Apor V. tér'                
+                subTitle: 'Bajcsy-Zs. út -> Apor V. tér',
+                shortTitle: '105 (Bajcsy-Zs.)'             
             }                         
         ];
 

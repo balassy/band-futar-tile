@@ -16,6 +16,7 @@ module.exports = {
         let result = {
             title: stop.title,
             subTitle: stop.subTitle,
+            shortTitle: stop.shortTitle,
             currentTime: '',
             nextRides: [],
             shortNextRides: ''
