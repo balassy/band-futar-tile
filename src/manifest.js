@@ -12,7 +12,7 @@ module.exports = {
 
     connections: [
         {
-            port: 3000,
+            port: 80,
             labels: ['api']
         }
     ],
