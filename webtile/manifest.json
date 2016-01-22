@@ -75,7 +75,7 @@
       "textBindings": [
         {
           "elementId": "1",
-          "value": "{{_1_2title}} ({{_1_2currenttime}} után)"
+          "value": "{{_1_2title}} ({{_1_2currenttime}})"
         },
         {
           "elementId": "2",
