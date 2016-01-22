@@ -22,8 +22,8 @@ module.exports = {
             description: 'Vas Gereben utca -> Széll Kálmán tér',
             now: now,
             nextRides: [],
-            shortTite: `59 (${now} után)`,
-            shortSubTitle: 'Vas G. - Széll K.',
+            shortTite: `59 villamos ${now} után`,
+            shortSubTitle: 'Vas G. u. -> Széll K. tér',
             shortNextRides: ''
         };
 
