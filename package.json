@@ -1,0 +1,27 @@
+{
+  "name": "band-futar-tile",
+  "version": "1.0.0",
+  "description": "A web service to return data for the BKK Futar tile running on Microsoft Band.",
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balassy/band-futar-tile.git"
+  },
+  "keywords": [
+    "microsoft",
+    "band",
+    "webtile"
+  ],
+  "author": "György Balássy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/balassy/band-futar-tile/issues"
+  },
+  "homepage": "https://github.com/balassy/band-futar-tile#readme",
+  "dependencies": {
+    "glue": "^3.1.0",
+    "hapi": "^12.1.0"
+  }
+}
