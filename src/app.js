@@ -4,9 +4,8 @@ var Manifest = require('./manifest');
 var Package = require('../package.json');
 
 var options = {
-    relativeTo: process.cwd() + '/src'
+    relativeTo: process.cwd()
 };
-
 
 Glue.compose(Manifest, options, function (err, server) {
     if (err) {
