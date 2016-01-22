@@ -1,0 +1,91 @@
+{
+  "manifestVersion": 1,
+  "name": "BKK Futár 59-105-105",
+  "description": "Az 59-es és a 105-ös busz menetrendje három megállóban.",
+  "version": 2,
+  "versionString": "2",
+  "author": "Balássy György",
+  "organization": "http://balassygyorgy.wordpress.com",
+  "contactEmail": "balassy.gyorgy@outlook.com",
+  "tileIcon": {
+    "46": "icons/tileIcon.png"
+  },
+  "icons": {},
+  "refreshIntervalMinutes": 15,
+  "resources": [
+    {
+      "url": "http://bandfutar.azurewebsites.net/nextride",
+      "style": "Simple",
+      "content": {
+        "_1_0title": "[0].title",
+        "_1_0currenttime": "[0].currentTime",
+        "_1_0subtitle": "[0].subTitle",
+        "_1_0shortnextrides": "[0].shortNextRides",
+        "_1_1title": "[1].title",
+        "_1_1currenttime": "[1].currentTime",
+        "_1_1subtitle": "[1].subTitle",
+        "_1_1shortnextrides": "[1].shortNextRides",
+        "_1_2title": "[2].title",
+        "_1_2currenttime": "[2].currentTime",
+        "_1_2subtitle": "[2].subTitle",
+        "_1_2shortnextrides": "[2].shortNextRides"
+      }
+    }
+  ],
+  "pages": [
+    {
+      "layout": "MSBand_NoScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "{{_1_0title}} ({{_1_0currenttime}})"
+        },
+        {
+          "elementId": "2",
+          "value": "{{_1_0subtitle}}"
+        },
+        {
+          "elementId": "3",
+          "value": "{{_1_0shortnextrides}}"
+        }
+      ]
+    },
+    {
+      "layout": "MSBand_NoScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "{{_1_1title}} ({{_1_1currenttime}})"
+        },
+        {
+          "elementId": "2",
+          "value": "{{_1_1subtitle}}"
+        },
+        {
+          "elementId": "3",
+          "value": "{{_1_1shortnextrides}}"
+        }
+      ]
+    },
+    {
+      "layout": "MSBand_NoScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "{{_1_2title}} ({{_1_2currenttime}} után)"
+        },
+        {
+          "elementId": "2",
+          "value": "{{_1_2subtitle}}"
+        },
+        {
+          "elementId": "3",
+          "value": "{{_1_2shortnextrides}}"
+        }
+      ]
+    }
+  ]
+}
