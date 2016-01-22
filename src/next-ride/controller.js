@@ -1,10 +1,13 @@
 'use strict';
 
+let MomentTimezone = require('moment-timezone');
 let Service = require('./service');
 let Rest = require('../utils/rest');
 
 function formatTime(dateTimeInSeconds) {
-    return new Date(dateTimeInSeconds * 1000).toTimeString().match(/\d{2}:\d{2}/)[0];
+    let gmtDateTime = new Date(dateTimeInSeconds * 1000);
+    let localDateTime = MomentTimezone(gmtDateTime).tz('Europe/Budapest');
+    return localDateTime.format('HH:mm');
 }
 
 module.exports = {
