@@ -15,7 +15,7 @@ on a Band. Therefore this project contains a Node.js webservice that calls into 
 transforms the results to a Band-optimized JSON result. This webservice can be deployed to any host, and can
 be called directly from a Band web tile.
 
-## What you can find here?
+## What can you find here?
 
 In this project you can find the following folders:
 
