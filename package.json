@@ -26,5 +26,9 @@
     "hapi": "^12.1.0",
     "moment-timezone": "^0.5.0",
     "request-promise": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "urbanjs-tools": "^0.1.11"
   }
 }
