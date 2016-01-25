@@ -1,12 +1,14 @@
+'use strict';
+
 module.exports = {
-    ok: function (reply, value) {
-        var r = reply(value);
+    ok (reply, value) {
+        const r = reply(value);
         r.statusCode = 200;
         return r;
     },
-    
-    internalServerError: function (reply, message) {
-        var r = reply('Internal Server Error: ' + message);
+
+    internalServerError (reply, message) {
+        const r = reply('Internal Server Error: ' + message);
         r.statusCode = 500;
         return r;
     }

@@ -1,41 +1,41 @@
 'use strict';
 
-let Promise = require('bluebird');
-let Service = require('./service');
-let Rest = require('../utils/rest');
+const Promise = require('bluebird');
+const Service = require('./service');
+const Rest = require('../utils/rest');
 
 module.exports = {
-    get: function (request, reply) {
-        let minutesAfter = 50;
-        
-        let stops = [
+    get (request, reply) {
+        const minutesAfter = 50;
+
+        const stops = [
             {
                 id: 'BKK_F02296',
                 title: `59 villamos`,
                 subTitle: 'Vas G. u. -> Széll K. tér',
-                shortTitle: '59 (Vas G.)'              
+                shortTitle: '59 (Vas G.)'
             },
             {
                 id: 'BKK_F02294',
                 title: `105 busz`,
                 subTitle: 'Apor V. tér -> Gyöngyösi u.',
-                shortTitle: '105 (Apor V.)'              
+                shortTitle: '105 (Apor V.)'
             },
             {
                 id: 'BKK_F00945',
                 title: `105 busz`,
                 subTitle: 'Bajcsy-Zs. út -> Apor V. tér',
-                shortTitle: '105 (Bajcsy-Zs.)'             
-            }                         
+                shortTitle: '105 (Bajcsy-Zs.)'
+            }
         ];
 
-        Promise.map(stops, function (stop) {
+        Promise.map(stops, function onPromiseMap (stop) {
             return Service.get(stop, minutesAfter);
         })
-            .then(function (stopResults) {
+            .then(function onServiceCallsSuccess (stopResults) {
                 Rest.ok(reply, stopResults);
             })
-            .catch(function (err) {
+            .catch(function onServiceCallsFail (err) {
                 Rest.internalServerError(reply, err);
             });
     }

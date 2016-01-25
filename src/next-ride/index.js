@@ -1,11 +1,13 @@
-var Controller = require('./controller');
-var Service = require('./service');
+'use strict';
 
-var internals = {
+const Controller = require('./controller');
+const Service = require('./service');
+
+const internals = {
     service: Service
 };
 
-internals.register = function (server, options, next) {
+internals.register = function register (server, options, next) {
     server.route({
         method: 'GET',
         path: '/',
