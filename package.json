@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A web service to return data for the BKK Futar tile running on Microsoft Band.",
   "scripts": {
-    "start": "cd src && node app.js"
+    "start": "cd src && node app.js",
+    "pre-commit": "gulp pre-commit"
   },
   "repository": {
     "type": "git",
