@@ -6,7 +6,7 @@ const Rest = require('../utils/rest');
 
 module.exports = {
   get(request, reply) {
-    const minutesAfter = 50;
+    const minutesAfter = 90;
 
     const stops = [
       {
