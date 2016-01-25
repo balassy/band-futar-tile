@@ -4,22 +4,22 @@ const Controller = require('./controller');
 const Service = require('./service');
 
 const internals = {
-    service: Service
+  service: Service
 };
 
-internals.register = function register (server, options, next) {
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: Controller.get
-    });
+internals.register = function register(server, options, next) {
+  server.route({
+    method: 'GET',
+    path: '/',
+    handler: Controller.get
+  });
 
-    next();
+  next();
 };
 
 
 internals.register.attributes = {
-    name: 'nextRide'
+  name: 'nextRide'
 };
 
 
