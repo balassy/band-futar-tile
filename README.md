@@ -46,6 +46,9 @@ the webservice this solution relies on. The `src/next-ride/service.js` file call
 Thanks for Gábor Nádai (Mefi) for the [KoviBusz](https://github.com/mefiblogger/KoviBusz) repository here on Github. The hosted version 
 of his application helped me (and you too) to easily find the ID of the stops I'm interested in.
 
+Thanks for Tamás Mágedli for the [UrbanJS](https://github.com/urbanjs/tools) toolset which is used by this project for
+static code analysis. 
+
 ## Limitations
 
 - Theoretically the Band udpates the tile in every 15 minutes (see the `refreshIntervalMinutes` value in the `webtile/manifest.json` file), 
