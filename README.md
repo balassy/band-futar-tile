@@ -3,6 +3,7 @@
 A webservice and a web tile for Microsoft Band to display Budapest public transport information using BKK Futár data service.
 
 [![Build Status](https://travis-ci.org/balassy/band-futar-tile.svg?branch=master)](https://travis-ci.org/balassy/band-futar-tile)
+[![Build status](https://ci.appveyor.com/api/projects/status/ampihr06uusax4n4?svg=true)](https://ci.appveyor.com/project/balassy/band-futar-tile)
 
 ## What is this?
 
