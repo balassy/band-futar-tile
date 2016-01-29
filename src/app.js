@@ -1,12 +1,11 @@
 'use strict';
 
-const path = require('path');
 const Glue = require('glue');
 const Manifest = require('./manifest');
 const Package = require('../package.json');
 
 const options = {
-  relativeTo: path.join(process.cwd(), 'src')
+  relativeTo: __dirname
 };
 
 Glue.compose(Manifest, options, function onGlueCompose(err, server) {
