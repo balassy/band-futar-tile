@@ -6,6 +6,7 @@
     "start": "cd src && node app.js",
     "pre-commit": "gulp pre-commit"
   },
+  "engines":{ "node": "5.x" },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/balassy/band-futar-tile.git"
@@ -30,6 +31,6 @@
   },
   "devDependencies": {
     "gulp": "^3.9.0",
-    "urbanjs-tools": "^0.1.11"
+    "urbanjs-tools": "^0.2.3"
   }
 }

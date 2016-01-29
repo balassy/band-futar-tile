@@ -17,10 +17,8 @@ internals.register = function register(server, options, next) {
   next();
 };
 
-
 internals.register.attributes = {
   name: 'nextRide'
 };
-
 
 module.exports = internals;
