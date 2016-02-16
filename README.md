@@ -4,6 +4,8 @@ A webservice and a web tile for Microsoft Band to display Budapest public transp
 
 [![Build Status](https://travis-ci.org/balassy/band-futar-tile.svg?branch=master)](https://travis-ci.org/balassy/band-futar-tile)
 [![Build status](https://ci.appveyor.com/api/projects/status/ampihr06uusax4n4?svg=true)](https://ci.appveyor.com/project/balassy/band-futar-tile)
+[![GitHub issues](https://img.shields.io/github/issues/balassy/band-futar-tile.svg)](https://github.com/balassy/band-futar-tile/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/balassy/band-futar-tile/master/LICENSE)
 
 ## What is this?
 
@@ -55,6 +57,13 @@ static code analysis.
 - Theoretically the Band udpates the tile in every 15 minutes (see the `refreshIntervalMinutes` value in the `webtile/manifest.json` file), 
 however I've experienced latency in that, sometimes more than 3 hours.
 - The code in its current state cannot differentiate between lines that uses the same stop.
+
+## Read more
+
+The following Hungarian blog posts describe the whole project in details:
+1. [BKK Futár Microsoft Bandre - programozási lehetőségek (1. rész)](https://balassygyorgy.wordpress.com/2016/01/30/bkk-futar-microsoft-bandre-1/)
+2. [BKK Futár Microsoft Bandre - a BKK Futár API (2. rész)](https://balassygyorgy.wordpress.com/2016/02/02/bkk-futar-microsoft-bandre-2-bkk-futar-api/)
+3. [BKK Futár Microsoft Bandre - service és webtile (3. rész)](https://balassygyorgy.wordpress.com/2016/02/15/bkk-futar-microsoft-bandre-3-service-es-webtile/)
 
 ## About the author
 
